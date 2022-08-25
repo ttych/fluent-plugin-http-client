@@ -107,17 +107,17 @@ module Fluent
         response = @client.send(@http_method)
 
         {
-          status: response.status,
-          success: response.success?,
-          response: response.body
+          'status' => response.status,
+          'success' => response.success?,
+          'response' => response.body
         }
       end
 
       def parse_exception(exception)
         {
-          status: -1,
-          success: false,
-          error: exception.to_s
+          'status' => -1,
+          'success' => false,
+          'error' => exception.to_s
         }
       end
     end
