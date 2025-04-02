@@ -1,9 +1,14 @@
-require:
+---
+
+plugins:
   - rubocop-rake
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 3.0
+
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
 
 Layout/LineLength:
   Max: 120
@@ -11,19 +16,15 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - fluent-plugin-http-client.gemspec
-    - 'test/**/*.rb'
+    - test/**/*.rb
 
 Metrics/ClassLength:
+  Max: 150
   Exclude:
-    - 'test/**/*.rb'
+    - test/**/*.rb
 
 Metrics/MethodLength:
   Max: 20
 
-# Style/StringLiterals:
-#   Enabled: true
-#   EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Style/Documentation:
+  Enabled: false

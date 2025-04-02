@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://gitlab.com/ttych/fluent-plugin-http-client'
   spec.license       = 'Apache-2.0'
 
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 3.0.0')
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
@@ -34,19 +34,22 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bump', '~> 0.10.0'
-  spec.add_development_dependency 'bundler', '~> 2.1.4'
-  spec.add_development_dependency 'byebug', '~> 11.1', '>= 11.1.1'
-  spec.add_development_dependency 'flay', '~> 2.13'
-  spec.add_development_dependency 'flog', '~> 4.6', '>= 4.6.6'
-  spec.add_development_dependency 'rake', '~> 13.0.1'
-  spec.add_development_dependency 'reek', '~> 6.1', '>= 6.1.0'
-  spec.add_development_dependency 'rubocop', '~> 1.33', '>= 1.33.0'
-  spec.add_development_dependency 'rubocop-rake', '~> 0.6.0'
-  spec.add_development_dependency 'simplecov', '~> 0.21.2'
-  spec.add_development_dependency 'test-unit', '~> 3.3.4'
+  spec.add_development_dependency 'bump', '~> 0.10'
+  spec.add_development_dependency 'bundler', '~> 2.6', '>= 2.6.6'
+  spec.add_development_dependency 'byebug', '~> 12.0'
+  spec.add_development_dependency 'flay', '~> 2.13', '>= 2.13.3'
+  spec.add_development_dependency 'flog', '~> 4.8'
+  spec.add_development_dependency 'mocha', '~> 2.7', '>= 2.7.1'
+  spec.add_development_dependency 'rake', '~> 13.2', '>= 13.2.1'
+  spec.add_development_dependency 'reek', '~> 6.5'
+  spec.add_development_dependency 'rubocop', '~> 1.75', '>= 1.75.1'
+  spec.add_development_dependency 'rubocop-rake', '~> 0.7', '>= 0.7.1'
+  spec.add_development_dependency 'simplecov', '~> 0.22'
+  spec.add_development_dependency 'test-unit', '~> 3.6', '>= 3.6.7'
+  spec.add_development_dependency 'timecop', '~> 0.9', '>= 0.9.10'
+  spec.add_development_dependency 'webrick', '~> 1.9', '>= 1.9.1'
 
-  spec.add_runtime_dependency 'faraday', '~> 2.5', '>= 2.0.1'
-  spec.add_runtime_dependency 'faraday-retry', '~> 2.0'
-  spec.add_runtime_dependency 'fluentd', ['>= 0.14.10', '< 2']
+  spec.add_dependency 'faraday', '~> 2.12', '>= 2.12.2'
+  spec.add_dependency 'faraday-retry', '~> 2.2', '>= 2.2.1'
+  spec.add_dependency 'fluentd', ['>= 0.14.10', '< 2']
 end
